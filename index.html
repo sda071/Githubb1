@@ -2,10 +2,106 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Average Marks Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f3f4;
+            margin: 0;
+            padding: 0;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1a73e8;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #5f6368;
+            font-size: 14px;
+        }
+        label {
+            display: block;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            border-radius: 4px;
+            border: 1px solid #dadce0;
+            font-size: 14px;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #1a73e8;
+        }
+        button {
+            margin-top: 30px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1669c1;
+        }
+        .required {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <H1>HELLO I AM DAKSH </H1>
+
+<div class="form-container">
+    <h1>Student Average Marks Survey</h1>
+    <p>Please fill out this form to help us analyze student performance.</p>
+
+    <form>
+        <label>Student Name <span class="required">*</span></label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <label>Class / Grade <span class="required">*</span></label>
+        <select required>
+            <option value="">Select class</option>
+            <option>8th</option>
+            <option>9th</option>
+            <option>10th</option>
+            <option>11th</option>
+            <option>12th</option>
+        </select>
+
+        <label>Stream (if applicable)</label>
+        <select>
+            <option value="">Select stream</option>
+            <option>Science</option>
+            <option>Commerce</option>
+            <option>Arts</option>
+        </select>
+
+        <label>Average Marks (%) <span class="required">*</span></label>
+        <input type="number" min="0" max="100" placeholder="e.g. 78" required>
+
+        <label>School / College Name</label>
+        <input type="text" placeholder="Enter institution name">
+
+        <label>Academic Year</label>
+        <input type="text" placeholder="e.g. 2024–2025">
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
 </body>
 </html>
